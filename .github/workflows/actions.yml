@@ -36,4 +36,6 @@ jobs:
         run: dotnet pack --configuration Release ${{ env.APP_NAME }}
       
       - name: Publish the package
-        run: dotnet nuget push ${{ env.APP_NAME }}/bin/Release/*.nupkg
+        run: |
+          cd /bin/Release
+          dotnet nuget push
