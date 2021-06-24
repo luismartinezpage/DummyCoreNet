@@ -1,0 +1,13 @@
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\bin\Debug\netcoreapp3.1\DummyCoreNet.exe
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\bin\Debug\netcoreapp3.1\DummyCoreNet.deps.json
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\bin\Debug\netcoreapp3.1\DummyCoreNet.runtimeconfig.json
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\bin\Debug\netcoreapp3.1\DummyCoreNet.runtimeconfig.dev.json
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\bin\Debug\netcoreapp3.1\DummyCoreNet.dll
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\bin\Debug\netcoreapp3.1\DummyCoreNet.pdb
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\obj\Debug\netcoreapp3.1\DummyCoreNet.csproj.AssemblyReference.cache
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\obj\Debug\netcoreapp3.1\DummyCoreNet.AssemblyInfoInputs.cache
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\obj\Debug\netcoreapp3.1\DummyCoreNet.AssemblyInfo.cs
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\obj\Debug\netcoreapp3.1\DummyCoreNet.csproj.CoreCompileInputs.cache
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\obj\Debug\netcoreapp3.1\DummyCoreNet.dll
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\obj\Debug\netcoreapp3.1\DummyCoreNet.pdb
+C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\DummyCoreNet\obj\Debug\netcoreapp3.1\DummyCoreNet.genruntimeconfig.cache
