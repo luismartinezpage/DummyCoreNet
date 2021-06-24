@@ -38,4 +38,4 @@ jobs:
       - name: Publish the package
         run: |
           cd ${{ env.APP_NAME }}/bin/Release/
-          dotnet nuget push
+          dotnet nuget push *.nupkg
