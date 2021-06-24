@@ -37,4 +37,4 @@ jobs:
       
       - name: Publish the package
         run: |
-          dotnet nuget push ${{ env.APP_NAME }}/bin/Release/*.nupkg -k $NUGET_AUTH_TOKEN
+          dotnet nuget push ${{ env.APP_NAME }}/bin/Release/*.nupkg -k ${{ secrets.UPLOAD_PACKAGE_TOKEN }}
