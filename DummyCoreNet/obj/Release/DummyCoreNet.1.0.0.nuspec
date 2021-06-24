@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DummyCoreNet</id>
+    <version>1.0.0</version>
+    <authors>DummyCoreNet</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\bin\Release\netcoreapp3.1\DummyCoreNet.runtimeconfig.json" target="lib\netcoreapp3.1\DummyCoreNet.runtimeconfig.json" />
+    <file src="C:\Users\0017771\Desktop\GitHUB_ACTIONS_TEST\DummyCoreNet\DummyCoreNet\bin\Release\netcoreapp3.1\DummyCoreNet.dll" target="lib\netcoreapp3.1\DummyCoreNet.dll" />
+  </files>
+</package>
