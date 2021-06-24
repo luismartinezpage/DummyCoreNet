@@ -9,10 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Build NET
     env:
-        APP_NAME: ${{ github.GITHUB_REPOSITORY }}
+        APP_NAME: ${{ env.github.GITHUB_REPOSITORY }}
         
     steps:
       - uses: actions/checkout@v2
+      
       - uses: actions/setup-dotnet@v1
         with:            
             source-url: https://nuget.pkg.github.com/luismartinezpage/index.json
@@ -25,6 +26,8 @@ jobs:
             echo Variable: $APP_NAME
             echo Variable: $github.GITHUB_REPOSITORY
             echo Variable: ${{ github.GITHUB_REPOSITORY }}
+            echo Variable: ${{ env.github.GITHUB_REPOSITORY }}
+            echo Variable: ${{ env.GITHUB_REPOSITORY }}
         
       - name: Build application
         run: dotnet build ${{ env.APP_NAME }}
