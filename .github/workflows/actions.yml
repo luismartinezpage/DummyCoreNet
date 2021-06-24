@@ -16,7 +16,7 @@ jobs:
       
       - uses: actions/setup-dotnet@v1
         with:            
-            source-url: https://nuget.pkg.github.com/luismartinezpage
+            source-url: https://nuget.pkg.github.com/luismartinezpage/index.json
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.UPLOAD_PACKAGE_TOKEN }}
 
@@ -37,6 +37,4 @@ jobs:
       
       - name: Publish the package
         run: |
-          cd ${{ env.APP_NAME }}/bin/Release/
-          ls
-          dotnet nuget push *.nupkg
+          dotnet nuget push */bin/Release/*.nupkg -k $NUGET_AUTH_TOKEN
