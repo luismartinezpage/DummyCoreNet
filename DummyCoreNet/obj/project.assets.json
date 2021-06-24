@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\0017771\\Desktop\\GitHUB_ACTIONS_TEST\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet.csproj",
+      "projectUniqueName": "c:\\Users\\0017771\\Desktop\\GitHUB_ACTIONS_TEST\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet.csproj",
       "projectName": "DummyCoreNet",
-      "projectPath": "C:\\Users\\0017771\\Desktop\\GitHUB_ACTIONS_TEST\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet.csproj",
+      "projectPath": "c:\\Users\\0017771\\Desktop\\GitHUB_ACTIONS_TEST\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet.csproj",
       "packagesPath": "C:\\Users\\0017771\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\0017771\\Desktop\\GitHUB_ACTIONS_TEST\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet\\obj\\",
+      "outputPath": "c:\\Users\\0017771\\Desktop\\GitHUB_ACTIONS_TEST\\DummyCoreNet\\DummyCoreNet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

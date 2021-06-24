@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qbiJHmgET+RXkNlajNGWP+POw5ST4aIErRyO2q35FdqTzCkLp49WYPMVumdIxdiy7P33hV3NW83kTtR6m9Xx0A==",
+  "dgSpecHash": "ZgvoDCIqX3c+B8ko5qzAJf7kYA+RQCU7t3/SGVbqz0i9VNLKPvxrD6jEzQ7yrrM1gKcNjxwEhxeBCryS/7ByCg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\0017771\\Desktop\\GitHUB_ACTIONS_TEST\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet.csproj",
+  "projectFilePath": "c:\\Users\\0017771\\Desktop\\GitHUB_ACTIONS_TEST\\DummyCoreNet\\DummyCoreNet\\DummyCoreNet.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

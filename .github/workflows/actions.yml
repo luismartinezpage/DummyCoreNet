@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build NET
     env:
-        APP_NAME: ${{ env.github.GITHUB_REPOSITORY }}
+        APP_NAME: DummyCoreNet
         
     steps:
       - uses: actions/checkout@v2
@@ -30,10 +30,10 @@ jobs:
             echo Variable: ${{ env.GITHUB_REPOSITORY }}
         
       - name: Build application
-        run: dotnet build ${{ env.APP_NAME }}
+        run: dotnet build ${{ env.APP_NAME }} --configuration Release
       
       - name: Create the package
         run: dotnet pack --configuration Release ${{ env.APP_NAME }}
       
-      - name: Publish the package to GPR
+      - name: Publish the package
         run: dotnet nuget push ${{ env.APP_NAME }}/bin/Release/*.nupkg
