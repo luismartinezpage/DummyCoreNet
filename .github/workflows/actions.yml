@@ -37,5 +37,5 @@ jobs:
       
       - name: Publish the package
         run: |
-          ls
+          cd ${{ env.APP_NAME }}/bin/Release/
           dotnet nuget push
