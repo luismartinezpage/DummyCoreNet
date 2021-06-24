@@ -37,5 +37,5 @@ jobs:
       
       - name: Publish the package
         run: |
-          cd /bin/Release
+          dir
           dotnet nuget push
