@@ -36,7 +36,7 @@ jobs:
             echo RUNNER_TOOL_CACHE ${{ runner.TOOL_CACHE }}
   
   Build_and_Upload_Artefact_To_Nuget:
-    needs: [Init]
+    needs: Init
     runs-on: ubuntu-latest
     name: Build And Upload Artefact To Nuget NET
     env:
