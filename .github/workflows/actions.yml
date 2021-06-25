@@ -50,7 +50,9 @@ jobs:
           NUGET_AUTH_TOKEN: ${{ secrets.UPLOAD_PACKAGE_TOKEN }}
       
       - name: Build application
-        run: dotnet build ${{ env.APP_NAME }} --configuration Release        
+        run: |
+          dotnet build ${{ env.APP_NAME }} --configuration Release        
+          echo "NEEDSCONTEXT: ${{ toJson(needs) }}"
       
       - if: github.event_name  == 'pull_request' && ( github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/master' )
         name: Create the package
@@ -58,7 +60,5 @@ jobs:
 
       - if: github.event_name  == 'pull_request' && ( github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/master' )      
         name: Publish the package
-        run: |
-          dotnet nuget push ${{ env.APP_NAME }}/bin/Release/*.nupkg
-          echo "NEEDSCONTEXT: ${{ toJson(needs) }}"
+        run: dotnet nuget push ${{ env.APP_NAME }}/bin/Release/*.nupkg
         
