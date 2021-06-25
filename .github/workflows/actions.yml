@@ -23,51 +23,51 @@ jobs:
 
       - name: Variables
         run: |
-            echo GITHUB_WORKFLOW   {{ github.GITHUB_WORKFLOW }}
-            echo GITHUB_RUN_ID     {{ github.GITHUB_RUN_ID }}
-            echo GITHUB_RUN_NUMBER {{ github.GITHUB_RUN_NUMBER }}
-            echo GITHUB_JOB        {{ github.GITHUB_JOB }}
-            echo GITHUB_ACTION     {{ github.GITHUB_ACTION }}
-            echo GITHUB_ACTION_PATH{{ github.GITHUB_ACTION_PATH }}
-            echo GITHUB_ACTIONS    {{ github.GITHUB_ACTIONS }}
-            echo GITHUB_ACTOR      {{ github.GITHUB_ACTOR }}
-            echo GITHUB_REPOSITORY {{ github.GITHUB_REPOSITORY }}
-            echo GITHUB_EVENT_NAME {{ github.GITHUB_EVENT_NAME }}
-            echo GITHUB_EVENT_PATH {{ github.GITHUB_EVENT_PATH }}
-            echo GITHUB_WORKSPACE  {{ github.GITHUB_WORKSPACE }}
-            echo GITHUB_SHA        {{ github.GITHUB_SHA }}
-            echo GITHUB_REF        {{ github.GITHUB_REF }}
-            echo GITHUB_HEAD_REF   {{ github.GITHUB_HEAD_REF }}
-            echo GITHUB_BASE_REF   {{ github.GITHUB_BASE_REF }}
-            echo GITHUB_SERVER_URL {{ github.GITHUB_SERVER_URL }}
-            echo GITHUB_API_URL    {{ github.GITHUB_API_URL }}
-            echo GITHUB_GRAPHQL_URL{{ github.GITHUB_GRAPHQL_URL }}
-            echo RUNNER_OS         {{ runner.RUNNER_OS }}
-            echo RUNNER_TEMP       {{ runner.RUNNER_TEMP }}
-            echo RUNNER_TOOL_CACHE {{ runner.RUNNER_TOOL_CACHE }}
+            echo GITHUB_WORKFLOW   ${{ github.GITHUB_WORKFLOW }}
+            echo GITHUB_RUN_ID     ${{ github.GITHUB_RUN_ID }}
+            echo GITHUB_RUN_NUMBER ${{ github.GITHUB_RUN_NUMBER }}
+            echo GITHUB_JOB        ${{ github.GITHUB_JOB }}
+            echo GITHUB_ACTION     ${{ github.GITHUB_ACTION }}
+            echo GITHUB_ACTION_PATH${{ github.GITHUB_ACTION_PATH }}
+            echo GITHUB_ACTIONS    ${{ github.GITHUB_ACTIONS }}
+            echo GITHUB_ACTOR      ${{ github.GITHUB_ACTOR }}
+            echo GITHUB_REPOSITORY ${{ github.GITHUB_REPOSITORY }}
+            echo GITHUB_EVENT_NAME ${{ github.GITHUB_EVENT_NAME }}
+            echo GITHUB_EVENT_PATH ${{ github.GITHUB_EVENT_PATH }}
+            echo GITHUB_WORKSPACE  ${{ github.GITHUB_WORKSPACE }}
+            echo GITHUB_SHA        ${{ github.GITHUB_SHA }}
+            echo GITHUB_REF        ${{ github.GITHUB_REF }}
+            echo GITHUB_HEAD_REF   ${{ github.GITHUB_HEAD_REF }}
+            echo GITHUB_BASE_REF   ${{ github.GITHUB_BASE_REF }}
+            echo GITHUB_SERVER_URL ${{ github.GITHUB_SERVER_URL }}
+            echo GITHUB_API_URL    ${{ github.GITHUB_API_URL }}
+            echo GITHUB_GRAPHQL_URL${{ github.GITHUB_GRAPHQL_URL }}
+            echo RUNNER_OS         ${{ runner.RUNNER_OS }}
+            echo RUNNER_TEMP       ${{ runner.RUNNER_TEMP }}
+            echo RUNNER_TOOL_CACHE ${{ runner.RUNNER_TOOL_CACHE }}
             echo ************************************************
-            echo GITHUB_WORKFLOW   {{ github.WORKFLOW }}
-            echo GITHUB_RUN_ID     {{ github.RUN_ID }}
-            echo GITHUB_RUN_NUMBER {{ github.RUN_NUMBER }}
-            echo GITHUB_JOB        {{ github.JOB }}
-            echo GITHUB_ACTION     {{ github.ACTION }}
-            echo GITHUB_ACTION_PATH{{ github.ACTION_PATH }}
-            echo GITHUB_ACTIONS    {{ github.ACTIONS }}
-            echo GITHUB_ACTOR      {{ github.ACTOR }}
-            echo GITHUB_REPOSITORY {{ github.REPOSITORY }}
-            echo GITHUB_EVENT_NAME {{ github.EVENT_NAME }}
-            echo GITHUB_EVENT_PATH {{ github.EVENT_PATH }}
-            echo GITHUB_WORKSPACE  {{ github.WORKSPACE }}
-            echo GITHUB_SHA        {{ github.SHA }}
-            echo GITHUB_REF        {{ github.REF }}
-            echo GITHUB_HEAD_REF   {{ github.HEAD_REF }}
-            echo GITHUB_BASE_REF   {{ github.BASE_REF }}
-            echo GITHUB_SERVER_URL {{ github.SERVER_URL }}
-            echo GITHUB_API_URL    {{ github.API_URL }}
-            echo GITHUB_GRAPHQL_URL{{ github.GRAPHQL_URL }}
-            echo RUNNER_OS         {{ runner.OS }}
-            echo RUNNER_TEMP       {{ runner.TEMP }}
-            echo RUNNER_TOOL_CACHE {{ runner.TOOL_CACHE }}
+            echo GITHUB_WORKFLOW:  ${{ github.WORKFLOW }}
+            echo GITHUB_RUN_ID     ${{ github.RUN_ID }}
+            echo GITHUB_RUN_NUMBER ${{ github.RUN_NUMBER }}
+            echo GITHUB_JOB        ${{ github.JOB }}
+            echo GITHUB_ACTION     ${{ github.ACTION }}
+            echo GITHUB_ACTION_PATH${{ github.ACTION_PATH }}
+            echo GITHUB_ACTIONS    ${{ github.ACTIONS }}
+            echo GITHUB_ACTOR      ${{ github.ACTOR }}
+            echo GITHUB_REPOSITORY ${{ github.REPOSITORY }}
+            echo GITHUB_EVENT_NAME ${{ github.EVENT_NAME }}
+            echo GITHUB_EVENT_PATH ${{ github.EVENT_PATH }}
+            echo GITHUB_WORKSPACE  ${{ github.WORKSPACE }}
+            echo GITHUB_SHA        ${{ github.SHA }}
+            echo GITHUB_REF        ${{ github.REF }}
+            echo GITHUB_HEAD_REF   ${{ github.HEAD_REF }}
+            echo GITHUB_BASE_REF   ${{ github.BASE_REF }}
+            echo GITHUB_SERVER_URL ${{ github.SERVER_URL }}
+            echo GITHUB_API_URL    ${{ github.API_URL }}
+            echo GITHUB_GRAPHQL_URL${{ github.GRAPHQL_URL }}
+            echo RUNNER_OS         ${{ runner.OS }}
+            echo RUNNER_TEMP       ${{ runner.TEMP }}
+            echo RUNNER_TOOL_CACHE ${{ runner.TOOL_CACHE }}
         
       - name: Build application
         run: dotnet build ${{ env.APP_NAME }} --configuration Release
