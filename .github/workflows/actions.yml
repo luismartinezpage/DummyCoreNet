@@ -9,31 +9,23 @@ jobs:
   Init:
     runs-on: ubuntu-latest
     name: Init Variables
+
     steps:
       - name: Variables
+        env:
+            GITHUB_CONTEXT: ${{ toJson(github) }}
+            JOB_CONTEXT: ${{ toJson(job) }}
+            STEPS_CONTEXT: ${{ toJson(steps) }}
+            RUNNER_CONTEXT: ${{ toJson(runner) }}
+            STRATEGY_CONTEXT: ${{ toJson(strategy) }}
+            MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: |
-            echo GITHUB_WORKFLOW:  ${{ github.WORKFLOW }}
-            echo GITHUB_RUN_ID     ${{ github.RUN_ID }}
-            echo GITHUB_RUN_NUMBER ${{ github.RUN_NUMBER }}
-            echo GITHUB_JOB        ${{ github.JOB }}
-            echo GITHUB_ACTION     ${{ github.ACTION }}
-            echo GITHUB_ACTION_PATH${{ github.ACTION_PATH }}
-            echo GITHUB_ACTIONS    ${{ github.ACTIONS }}
-            echo GITHUB_ACTOR      ${{ github.ACTOR }}
-            echo GITHUB_REPOSITORY ${{ github.REPOSITORY }}
-            echo GITHUB_EVENT_NAME ${{ github.EVENT_NAME }}
-            echo GITHUB_EVENT_PATH ${{ github.EVENT_PATH }}
-            echo GITHUB_WORKSPACE  ${{ github.WORKSPACE }}
-            echo GITHUB_SHA        ${{ github.SHA }}
-            echo GITHUB_REF        ${{ github.REF }}
-            echo GITHUB_HEAD_REF   ${{ github.HEAD_REF }}
-            echo GITHUB_BASE_REF   ${{ github.BASE_REF }}
-            echo GITHUB_SERVER_URL ${{ github.SERVER_URL }}
-            echo GITHUB_API_URL    ${{ github.API_URL }}
-            echo GITHUB_GRAPHQL_URL${{ github.GRAPHQL_URL }}
-            echo RUNNER_OS         ${{ runner.OS }}
-            echo RUNNER_TEMP       ${{ runner.TEMP }}
-            echo RUNNER_TOOL_CACHE ${{ runner.TOOL_CACHE }}
+          echo "$GITHUB_CONTEXT"
+          echo "$JOB_CONTEXT"
+          echo "$STEPS_CONTEXT"
+          echo "$RUNNER_CONTEXT"
+          echo "$STRATEGY_CONTEXT"
+          echo "$MATRIX_CONTEXT"
   
   Build_and_Upload_Artefact_To_Nuget:
     needs: Init
@@ -52,7 +44,8 @@ jobs:
       
       - name: Build application
         run: dotnet build ${{ env.APP_NAME }} --configuration Release
-
+        
+        if: github.event_name  == 'pull_request' && ( github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/master' )
       - name: Create the package
         run: dotnet pack --configuration Release ${{ env.APP_NAME }}
       
