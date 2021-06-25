@@ -53,6 +53,7 @@ jobs:
         run: |
           dotnet build ${{ env.APP_NAME }} --configuration Release        
           echo "NEEDSCONTEXT: ${{ toJson(needs) }}"
+          echo "ENV_CONTEXT: ${{ toJson(env) }}"
       
       - if: github.event_name  == 'pull_request' && ( github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/master' )
         name: Create the package
