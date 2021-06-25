@@ -19,12 +19,12 @@ jobs:
             STRATEGY_CONTEXT: ${{ toJson(strategy) }}
             MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: |
-          echo "$GITHUB_CONTEXT"
-          echo "$JOB_CONTEXT"
-          echo "$STEPS_CONTEXT"
-          echo "$RUNNER_CONTEXT"
-          echo "$STRATEGY_CONTEXT"
-          echo "$MATRIX_CONTEXT"
+          echo "GITHUB_CONTEXT: $GITHUB_CONTEXT"
+          echo "JOB_CONTEXT: $JOB_CONTEXT"
+          echo "STEPS_CONTEXT: $STEPS_CONTEXT"
+          echo "RUNNER_CONTEXT: $RUNNER_CONTEXT"
+          echo "STRATEGY_CONTEXT: $STRATEGY_CONTEXT"
+          echo "MATRIX_CONTEXT: $MATRIX_CONTEXT"
   
   Build_and_Upload_Artefact_To_Nuget:
     needs: Init
