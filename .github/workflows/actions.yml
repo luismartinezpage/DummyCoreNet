@@ -44,12 +44,14 @@ jobs:
           NUGET_AUTH_TOKEN: ${{ secrets.UPLOAD_PACKAGE_TOKEN }}
       
       - name: Build application
-        run: dotnet build ${{ env.APP_NAME }} --configuration Release
-        
-        if: github.event_name  == 'pull_request' && ( github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/master' )
-      - name: Create the package
-        run: dotnet pack --configuration Release ${{ env.APP_NAME }}
+        run: dotnet build ${{ env.APP_NAME }} --configuration Release        
       
-      - name: Publish the package
+      - if: github.event_name  == 'pull_request' && ( github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/master' )
+        name: Create the package
+        run: dotnet pack --configuration Release ${{ env.APP_NAME }}
+
+      - if: github.event_name  == 'pull_request' && ( github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/master' )      
+        name: Publish the package
         run: |
           dotnet nuget push ${{ env.APP_NAME }}/bin/Release/*.nupkg
+        
