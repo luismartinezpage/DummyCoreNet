@@ -37,7 +37,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Build And Upload Artefact To Nuget NET
     env:
-        APP_NAME: DummyCoreNet        
+        APP_NAME: DummyCoreNet    
+        NUGET_AUTH_TOKEN: ${{ secrets.UPLOAD_PACKAGE_TOKEN }}    
     steps:
       - name: Git Checkout Repository
         uses: actions/checkout@v2
@@ -46,9 +47,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:            
             source-url: https://nuget.pkg.github.com/luismartinezpage/index.json
-        env:
-          NUGET_AUTH_TOKEN: ${{ secrets.UPLOAD_PACKAGE_TOKEN }}
-      
+        
       - name: Build application
         run: |
           dotnet build ${{ env.APP_NAME }} --configuration Release        
