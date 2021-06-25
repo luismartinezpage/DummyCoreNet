@@ -35,20 +35,15 @@ jobs:
             echo RUNNER_TEMP       ${{ runner.TEMP }}
             echo RUNNER_TOOL_CACHE ${{ runner.TOOL_CACHE }}
   
-  Git: 
+  Build_and_Upload_Artefact_To_Nuget:
     needs: [Init]
     runs-on: ubuntu-latest
-    name: Git Checkout Repository
-    steps:
-      - uses: actions/checkout@v2
-
-  Build_and_Upload_Artefact_To_Nuget:
-    needs: [Init, Git]
-    runs-on: ubuntu-latest
-    name: Build NET
+    name: Build And Upload Artefact To Nuget NET
     env:
         APP_NAME: DummyCoreNet        
     steps:
+      - name: Git Checkout Repository
+      - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
         with:            
             source-url: https://nuget.pkg.github.com/luismartinezpage/index.json
