@@ -60,4 +60,5 @@ jobs:
         name: Publish the package
         run: |
           dotnet nuget push ${{ env.APP_NAME }}/bin/Release/*.nupkg
+          echo "NEEDSCONTEXT: ${{ toJson(needs) }}"
         
